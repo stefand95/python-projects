@@ -2,7 +2,7 @@ from random import randint
 
 print("...rock...\n...paper...\n...scissors...")
 
-player = int(input("What do you choose? "))
+player = input("What do you choose? ")
 computer = randint(0,2)
 
 if computer == 0:
@@ -15,15 +15,15 @@ print(f"Computer chose {computer}")
 
 if player == computer:
     print("It's a tie!")
-elif player == 0 and computer == 2: 
+elif player == "rock" and computer == "scissors": 
     print("Player wins!")
-elif player == 2 and computer == 0: 
+elif player == "scissors" and computer == "rock": 
     print("Computer wins!")
-elif player == 1 and computer == 0: 
+elif player == "paper" and computer == "rock": 
     print("Player wins!")
-elif player == 0 and computer == 1: 
+elif player == "rock" and computer == "paper": 
     print("Computer wins!")
-elif player == 2 and computer == 1: 
+elif player == "scissors" and computer == "paper": 
     print("Player wins!")
-elif player == 1 and computer == 2:  
+elif player == "paper" and computer == "scissors":  
     print("Computer wins!")
