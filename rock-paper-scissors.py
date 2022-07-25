@@ -27,17 +27,32 @@ while player_wins < winning_score and computer_wins < winning_score:
     elif player == "rock":
         if computer == "scissors": 
             print("You win!")
+            player_wins += 1
         else:
             print("You lose!")
+            computer_wins += 1
     elif player == "paper":
         if computer == "rock": 
             print("You win!")
+            player_wins += 1
         else:
             print("You lose!")
+            computer_wins += 1
     elif player == "scissors":
         if computer == "paper": 
             print("You win!")
+            player_wins += 1
         else:
             print("You lose!")
+            computer_wins += 1
     else:
         print("Please enter a valid move!")
+
+print(f"FINAL SCORE:\nPlayer score: {player_wins} Computer score: {computer_wins}")
+
+if player_wins > computer_wins:
+    print("YOU WIN!")
+elif player_wins == computer_wins:
+    print("IT'S A TIE")
+else:
+    print("YOU LOSE!")
